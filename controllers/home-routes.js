@@ -10,13 +10,30 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize user data so templates can read it
-    const users = userData.map((project) => project.get({ plain: true }));
+    const users = userData.map((post) => post.get({ plain: true }));
 
     // Pass serialized data into Handlebars.js template
     res.render('homepage', { users });
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get('/dashboard', (req, res) => {
+  if ( !req.session.logged_in) {
+    res.redirect('/login');
+    return;
+  }
+});
+
+router.get('/login', (req, res) => {
+  // If a session exists, redirect the request to the homepage
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
 });
 
 module.exports = router;
