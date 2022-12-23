@@ -25,8 +25,8 @@ Post.init(
         allowNull: false,
 
     },
-    postedBy:{
-        type: DataTypes.INTEGER,
+    posted_by:{
+        type: DataTypes.STRING,
         references:{
             model: 'user',
             key: 'id',
