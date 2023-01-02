@@ -12,6 +12,16 @@ router.get('/', async (req,res) => {
   }
 });
 
+router.get('/:id', async (req,res) => {
+  try{
+    const postData = await Post.findOne({
+    });
+    res.status(200).json(postData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const newPost = await Post.create({
