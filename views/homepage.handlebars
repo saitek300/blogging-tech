@@ -1,8 +1,10 @@
 {{#each posts as |post| }}
 <div class="row align-center mb-5">
     <div class="col-md-6" id="postContainer">
-        <h2>{{post.title}}</h2>
-        
+        <a id="postLink" href="/api/posts/{{post.id}}">{{post.title}}</a>
+
+        <p>Created by: {{post.user.name}}</p>
+
         <p>{{post.body}}</p>
     </div>
 </div>
