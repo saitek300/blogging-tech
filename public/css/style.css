@@ -8,8 +8,8 @@ nav {
     color: var(--light);
 }
 
-a {
-    color: var(--light);
+#navLink {
+ color: var(--light);
 }
 
 #newPostBtn {
@@ -31,4 +31,10 @@ a {
 body {
     background-color: var(--light);
     color: var(--dark)
+}
+
+#postLink{
+    font-size: 35px;
+    font-weight: bold;
+    color:var(--dark)
 }
