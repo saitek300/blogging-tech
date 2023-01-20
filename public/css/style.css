@@ -36,5 +36,15 @@ body {
 #postLink{
     font-size: 35px;
     font-weight: bold;
-    color:var(--dark)
+    color:var(--light)
+}
+
+#postContainer{
+    border-style: solid;
+
+}
+
+#postContainer h2{
+    background-color: var(--dark);
+    color: var(--light);
 }

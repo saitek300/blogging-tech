@@ -1,6 +1,22 @@
-<div class="text-center">
-    <h2>{{post.title}}</h2>
-    <p>Created By: {{post.user.name}}  At:{{format_date post.date}}</p>
+<div class="text-center" id="postContainer">
+    <h2>{{post.title}}
+        <p>Created By: {{post.user.name}} At:{{format_date post.date}}</p>
+    </h2>
+
     <p>{{post.body}}</p>
-    
+
+</div>
+
+<div>
+    {{#each post.comment.body}}
+</div>
+
+<div class="text-center" id="postContainer">
+    <h2>comment:</h2>
+    <input placeholder="type comment here">
+
+    </input><br><br>
+
+    <button>Submit</button>
+
 </div>
